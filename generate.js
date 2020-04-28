@@ -24,5 +24,3 @@ window.addEventListener("DOMContentLoaded", (event) => {
     document.getElementById("checkbox-missions").checked = (reason==='mission');
     document.getElementById("generate-btn").click()
 });
-
-//#f=Luc&l=Viguie&b=25%2F09%2F1981&p=Albi&a=6%20rue%20Francois%20Aune&c=Nice&z=06000&r=family
