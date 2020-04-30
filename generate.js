@@ -16,13 +16,13 @@ window.addEventListener("DOMContentLoaded", (event) => {
     document.getElementById("field-zipcode").value = urlParams.get("z"); //zipcode
     const reasons = urlParams.get("r"); //reason
     //const reason = urlParams.get("r"); //reason
-    document.getElementById("checkbox-travail").checked = reasons.match('work');
-    document.getElementById("checkbox-courses").checked = reasons.match('shopping');
-    document.getElementById("checkbox-sante").checked = reasons.match('health');
-    document.getElementById("checkbox-famille").checked = reasons.match('family');
-    document.getElementById("checkbox-sport").checked = reasons('sport');
-    document.getElementById("checkbox-judiciaire").checked = reasons('legal');
-    document.getElementById("checkbox-missions").checked = reasons('mission');
+    if(reasons.search('work') >= 0) document.getElementById("checkbox-travail").checked = true;
+    if(reasons.search('shopping') >=0) document.getElementById("checkbox-courses").checked = true;
+    if(reasons.search('health') >=0) document.getElementById("checkbox-sante").checked = true;
+    if(reasons.search('family') >=0) document.getElementById("checkbox-famille").checked = true;
+    if(reasons.search('sport') >=0) document.getElementById("checkbox-sport").checked = true;
+    if(reasons.search('legal') >=0) document.getElementById("checkbox-judiciaire").checked = true;
+    if(reasons.search('mission') >=0) document.getElementById("checkbox-missions").checked = true;
     //document.getElementById("checkbox-travail").checked = (reason==='work');
     //document.getElementById("checkbox-courses").checked = (reason==='buy');
     //document.getElementById("checkbox-sante").checked = (reason==='health');
