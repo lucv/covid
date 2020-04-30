@@ -14,13 +14,21 @@ window.addEventListener("DOMContentLoaded", (event) => {
     document.getElementById("field-address").value = urlParams.get("a"); //address
     document.getElementById("field-town").value = urlParams.get("c"); //city
     document.getElementById("field-zipcode").value = urlParams.get("z"); //zipcode
-    const reason = urlParams.get("r"); //reason
-    document.getElementById("checkbox-travail").checked = (reason==='work');
-    document.getElementById("checkbox-courses").checked = (reason==='buy');
-    document.getElementById("checkbox-sante").checked = (reason==='health');
-    document.getElementById("checkbox-famille").checked = (reason==='family');
-    document.getElementById("checkbox-sport").checked = (reason==='sport');
-    document.getElementById("checkbox-judiciaire").checked = (reason==='legal');
-    document.getElementById("checkbox-missions").checked = (reason==='mission');
+    const reasons = urlParams.get("r"); //reason
+    //const reason = urlParams.get("r"); //reason
+    document.getElementById("checkbox-travail").checked = reasons.match('work');
+    document.getElementById("checkbox-courses").checked = reasons.match('buy');
+    document.getElementById("checkbox-sante").checked = reasons.match('health');
+    document.getElementById("checkbox-famille").checked = reasons.match('family');
+    document.getElementById("checkbox-sport").checked = reasons('sport');
+    document.getElementById("checkbox-judiciaire").checked = reasons('legal');
+    document.getElementById("checkbox-missions").checked = reasons('mission');
+    //document.getElementById("checkbox-travail").checked = (reason==='work');
+    //document.getElementById("checkbox-courses").checked = (reason==='buy');
+    //document.getElementById("checkbox-sante").checked = (reason==='health');
+    //document.getElementById("checkbox-famille").checked = (reason==='family');
+    //document.getElementById("checkbox-sport").checked = (reason==='sport');
+    //document.getElementById("checkbox-judiciaire").checked = (reason==='legal');
+    //document.getElementById("checkbox-missions").checked = (reason==='mission');
     document.getElementById("generate-btn").click()
 });
