@@ -43,7 +43,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
         }
     }, 1500)
     setTimeout(() => {
-        window.close();
+        //window.close();
     }, 5000)
 });
 
