@@ -17,12 +17,14 @@ window.addEventListener("DOMContentLoaded", (event) => {
     const reasons = urlParams.get("r"); //reason
     //const reason = urlParams.get("r"); //reason
     if(reasons.search('work') >= 0) document.getElementById("checkbox-travail").checked = true;
-    if(reasons.search('shopping') >=0) document.getElementById("checkbox-courses").checked = true;
+    if(reasons.search('shopping') >=0) document.getElementById("checkbox-achats").checked = true;
     if(reasons.search('health') >=0) document.getElementById("checkbox-sante").checked = true;
     if(reasons.search('family') >=0) document.getElementById("checkbox-famille").checked = true;
-    if(reasons.search('sport') >=0) document.getElementById("checkbox-sport").checked = true;
-    if(reasons.search('legal') >=0) document.getElementById("checkbox-judiciaire").checked = true;
+    if(reasons.search('disability') >=0) document.getElementById("checkbox-handicap").checked = true;
+    if(reasons.search('sport') >=0) document.getElementById("checkbox-sport_animaux").checked = true;
+    if(reasons.search('convocation') >=0) document.getElementById("checkbox-convocation").checked = true;
     if(reasons.search('mission') >=0) document.getElementById("checkbox-missions").checked = true;
+    if(reasons.search('children') >=0) document.getElementById("checkbox-enfants").checked = true;
     //document.getElementById("checkbox-travail").checked = (reason==='work');
     //document.getElementById("checkbox-courses").checked = (reason==='buy');
     //document.getElementById("checkbox-sante").checked = (reason==='health');
