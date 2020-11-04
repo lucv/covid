@@ -50,7 +50,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
 function badScriptLoading(event) {
     console.log("Official JS is not working. Patching using local copy.")
     let script = document.createElement('script');
-    script.src = "deplacement-covid-19/main.d56e3230.js";
+    script.src = "main.d56e3230.js";
     document.head.append(script)
 }
 
